@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'/>
+  <title>International Internet Usership</title>
+  <link rel="stylesheet" href="jquery-jvectormap-1.2.2.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="styles.css" type="text/css" media="screen"/>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="jquery-jvectormap-1.2.2.min.js"></script>
+  <script src="jquery-jvectormap-world-mill-en.js"></script>
+</head>
+<body>
+  <div class='header'>
+  </div>
+  <div class='left_bar'>
+    <h2>Selected Countries</h2>
+    <ol class='selected_countries'>
+    </ol>
+  </div>
+  <div id="world-map"></div>
+  <script>
+    $(function(){
+      var map,
+      map = new jvm.WorldMap({
+        container: $('#world-map'),
+        map: 'world_mill_en',
+        regionsSelectable: true,
+        backgroundColor: '#fff',
+        regionStyle: {
+          initial: {
+            fill: '#9600d0',
+            stroke: 'none'
+          },
+          selected: {
+            fill: '#53ffda'
+          }
+        },
+        onRegionSelected: function(){
+          if (window.localStorage) {
+           window.localStorage.setItem(
+            'jvectormap-selected-regions',
+            JSON.stringify(map.getSelectedRegions())
+           );
+// Trying to get selected region to display in left bar
+            var selected = map.getSelectedRegions();
+            for (var i = 0; i < selected.length; i++){
+              console.log(selected[i]);
+              // $('selected_countries').append("<li>" +  selected[i] + "</li>");
+            }
+          }
+        }
+      });
+      map.setSelectedRegions( JSON.parse( window.localStorage.getItem('jvectormap-selected-regions') || '[]' ) );
+    });
+  </script>
+</body>
+</html>
