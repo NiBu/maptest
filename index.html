@@ -44,10 +44,12 @@
            );
 // Trying to get selected region to display in left bar
             var selected = map.getSelectedRegions();
+            var list = [];
             for (var i = 0; i < selected.length; i++){
-              console.log(selected[i]);
+              list = list + '<li>' + selected[i] + '</li>';
               // $('selected_countries').append("<li>" +  selected[i] + "</li>");
             }
+            $('.selected_countries').html(list);
           }
         }
       });
