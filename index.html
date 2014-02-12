@@ -8,11 +8,13 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="javascripts/jquery-jvectormap-1.2.2.min.js"></script>
   <script src="javascripts/jquery-jvectormap-world-mill-en.js"></script>
+  <script type="text/javascript" src='data/internetUserData.json'></script>
 </head>
+
 <body>
   <div class='header'>
     <h1 class ='brand-container'>
-      <a href="/" class='brand' title="WorldData Logo"></a>
+      <a href="" class='brand' title="WorldData Logo"></a>
     </h1>
   </div>
   <div class='left_bar'>
@@ -29,14 +31,22 @@
         map: 'world_mill_en',
         regionsSelectable: true,
         backgroundColor: '#fff',
-        regionStyle: {
-          initial: {
-            fill: '#9600d0',
-            stroke: 'none'
-          },
-          selected: {
-            fill: '#53ffda'
-          }
+        // regionStyle: {
+        //   initial: {
+        //     fill: '#9600d0',
+        //     stroke: 'none'
+        //   },
+        //   selected: {
+        //     fill: '#53ffda'
+        //   }
+        // },
+        series: {
+          regions: [{
+            scale: ['#ff2c35','#fff616','#81ff64', '#33ff20'],
+            attribute: 'fill',
+            values: internetUserData,
+            normalizeFunction: 'linear'
+          }]
         },
         onRegionSelected: function(){
           if (window.localStorage) {
@@ -52,7 +62,20 @@
             }
             $('.selected_countries').html(list);
           }
+        },
+        onRegionLabelShow: function(event, label, code){
+        if (internetUserData[code] != undefined){
+          label.html(
+            ''+label.html()+'</br>'+
+            'Internet Access: '+ internetUserData[code] +'%'
+          );
+        } else {
+          label.html(
+            ''+label.html()+'</br>'+
+            'No Data Available'
+          );
         }
+      }
       });
       map.setSelectedRegions( JSON.parse( window.localStorage.getItem('jvectormap-selected-regions') || '[]' ) );
     });
