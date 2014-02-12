@@ -1,0 +1,20 @@
+.header {
+  height:60px;
+  background:#6f5499;
+  border:1px solid #CCC;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.left_bar {
+  width: 25%;
+  height: 600px;
+  float: left;
+  background:#e0e6f4;
+}
+
+#world-map {
+  width: 75%;
+  height: 600px;
+  float: left;
+}
