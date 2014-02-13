@@ -3,8 +3,9 @@
 <head>
   <meta charset='utf-8'/>
   <title>International Internet Usership</title>
+  <link rel="stylesheet" href="stylesheets/application.scss" type="text/css" media="screen" />
+  <link rel="stylesheet" href="stylesheets/foundation.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="stylesheets/jquery-jvectormap-1.2.2.css" type="text/css" media="screen" />
-  <link rel="stylesheet" href="stylesheets/styles.css" type="text/css" media="screen" />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="javascripts/jquery-jvectormap-1.2.2.min.js"></script>
   <script src="javascripts/jquery-jvectormap-world-mill-en.js"></script>
@@ -23,10 +24,10 @@
     </ol>
   </div>
   <div id="world-map"></div>
-    <div id='map-title'></div>
-      <h2></h2>
-    <div id='data-source'></div>
-    <div id='map-legend'></div>
+    <div class='map-title'></div>
+      <h2>TEST TITLE</h2>
+    <div class='data-source'></div>
+    <div class='map-legend'></div>
   <script>
     $(function(){
       var map,
@@ -34,21 +35,21 @@
         container: $('#world-map'),
         map: 'world_mill_en',
         regionsSelectable: true,
-        backgroundColor: '#fff',
+        backgroundColor: '#505050',
         regionStyle: {
           initial: {
             fill: '#000000',
             stroke: 'none'
           },
           selected: {
-            fill: '#ff19f9',
-            "stroke-width": 1,
+            fill: '#c526f7',
+            "stroke-width": 0.5,
             stroke: '#000000'
           }
         },
         series: {
           regions: [{
-            scale: ['#ff2c35','#fff616','#81ff64', '#33ff20'],
+            scale: ['#ff2c35','#fff616', '#33ff20'],
             attribute: 'fill',
             values: internetUserData,
             normalizeFunction: 'linear'
