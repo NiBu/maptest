@@ -23,6 +23,10 @@
     </ol>
   </div>
   <div id="world-map"></div>
+    <div id='map-title'></div>
+      <h2></h2>
+    <div id='data-source'></div>
+    <div id='map-legend'></div>
   <script>
     $(function(){
       var map,
@@ -31,15 +35,17 @@
         map: 'world_mill_en',
         regionsSelectable: true,
         backgroundColor: '#fff',
-        // regionStyle: {
-        //   initial: {
-        //     fill: '#9600d0',
-        //     stroke: 'none'
-        //   },
-        //   selected: {
-        //     fill: '#53ffda'
-        //   }
-        // },
+        regionStyle: {
+          initial: {
+            fill: '#000000',
+            stroke: 'none'
+          },
+          selected: {
+            fill: '#ff19f9',
+            "stroke-width": 1,
+            stroke: '#000000'
+          }
+        },
         series: {
           regions: [{
             scale: ['#ff2c35','#fff616','#81ff64', '#33ff20'],
