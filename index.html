@@ -13,21 +13,86 @@
 </head>
 
 <body>
-  <div class='header'>
-    <h1 class ='brand-container'>
+
+<div id='container'>
+  <nav class='top-bar'>
+    <ul class='title-area'><a href="index.html">
+      <li>
+        <h1 class ='brand'>
+        </h1>
+      </li></a>
+    </ul>
+    <section class='top-bar-section'>
+      <ul class='right'>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </section>
+    <!-- <h1 class ='brand-container'>
       <a href="" class='brand' title="WorldData Logo"></a>
-    </h1>
-  </div>
-  <div class='left_bar'>
-    <h2>Selected Countries</h2>
-    <ol class='selected_countries'>
-    </ol>
-  </div>
-  <div id="world-map"></div>
-    <div class='map-title'></div>
-      <h2>TEST TITLE</h2>
-    <div class='data-source'></div>
-    <div class='map-legend'></div>
+    </h1> -->
+  </nav>
+
+  <div class='row'></div>
+    <div class='small-12 medium-6 large-4 columns'>
+      <div class='map-choice-container'>
+        <div class='map-choice'>
+          <div class='content'>
+            <div class='map-choice-title'>
+              <h2>World</h2>
+            </div>
+            <div class='map-choice-img-holder'>
+              <img src="images/world_map.png">
+            </div>
+            <a class='button'>Choose</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='small-12 medium-6 large-4 columns'>
+      <div class='map-choice-container'>
+        <div class='map-choice'>
+          <div class='content'>
+            <div class='map-choice-title'>
+              <h2>Europe</h2>
+            </div>
+            <div class='map-choice-img-holder'>
+              <img src="images/europe_map.png">
+            </div>
+            <a class='button'>Choose</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class='small-12 medium-6 large-4 columns'>
+      <div class='map-choice-container'>
+        <div class='map-choice'>
+          <div class='content'>
+            <div class='map-choice-title'>
+              <h2>USA</h2>
+            </div>
+            <div class='map-choice-img-holder'>
+              <img src="images/usa_map.png">
+            </div>
+            <a class='button'>Choose</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  <div class='row'></div>
+    <div class='left_bar large-3 columns'>
+      <h2>Selected Countries</h2>
+      <ol class='selected_countries'>
+      </ol>
+    </div>
+    <div class='map-container large-9 columns'></div>
+      <div class='map-title'></div>
+        <h2>TEST TITLE</h2>
+      <div class='data-source'></div>
+      <div class='map-legend'></div>
+      <div id="world-map"></div>
   <script>
     $(function(){
       var map,
@@ -87,5 +152,6 @@
       map.setSelectedRegions( JSON.parse( window.localStorage.getItem('jvectormap-selected-regions') || '[]' ) );
     });
   </script>
+</div>
 </body>
 </html>
