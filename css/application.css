@@ -13,6 +13,15 @@
   padding: 0;
   margin: 4px; }
 
+.choose-map {
+  height: 80px;
+  width: 100%;
+  background: #ff26d6;
+  margin-top: 20px;
+  box-shadow: 1px 2px 3px #ccc;
+  box-sizing: border-box;
+  text-align: center; }
+
 .map-choice-container {
   top: 20px;
   position: relative;
@@ -47,8 +56,7 @@
   -moz-border-radius-bottomright: 5px;
   -moz-border-radius-bottomleft: 5px;
   border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  box-sizing: border-box; }
+  border-bottom-left-radius: 5px; }
 
 .map-choice-title {
   top: 0px;
@@ -73,32 +81,41 @@
   border-radius: 5%;
   background-color: #4ef74e; }
 
-.left_bar {
-  height: 600px;
-  background: #e0e6f4; }
-
 .map-container {
   text-align: center;
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 650px;
   background-color: #ccc;
   box-shadow: 2px 2px 3px #ccc;
-  margin-top: 20px;
-  margin-bottom: 20px; }
+  background: #fff; }
+
+.map-legend {
+  width: 50%;
+  height: 30px;
+  background: linear-gradient(90deg, #ff2c35, #fff616, #33ff20);
+  z-index: 1;
+  position: absolute;
+  bottom: 25px;
+  left: 25%;
+  border: #fff solid 2px; }
 
 #world-map {
+  position: absolute;
   top: 40px;
-  position: relative;
   width: 100%;
-  height: 100%; }
+  height: 610px;
+  margin: 0; }
+
+.jvectormap-container {
+  border-radius: 0 0 5px 5px;
+  top: 0px; }
 
 .map-title {
-  height: 40px;
+  top: 0;
+  min-height: 40px;
   width: 100%;
   background: #4e75f7;
-  border: 2px #ccc;
-  float: left;
   position: absolute;
   z-index: 1;
   border-radius: 5px 5px 0 0; }
@@ -106,4 +123,29 @@
 .map-title h2 {
   color: white;
   font-size: 1.5em;
-  text-shadow: 1px 1px 1px #000; }
+  text-shadow: 1px 1px 1px #000;
+  padding: 0;
+  margin: 0; }
+
+.data-source {
+  min-height: 20px;
+  position: absolute;
+  min-width: 50%;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  margin-right: 20px; }
+
+.data-source p {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  color: #fff; }
+
+.data-source a:link, a:visited, a:active {
+  color: #fff;
+  text-decoration: underline; }
