@@ -1,0 +1,35 @@
+@import
+  "normalize",
+  "foundation",
+  "jvectormap",
+  "base",
+  "mapcard",
+  "map";
+
+.top-bar {
+  height:60px;
+  background:#6f5499;
+  border:1px solid #CCC;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.brand {
+  position: absolute;
+  width: 335px;
+  height: 35px;
+  background: url(../../images/worlddata_logo.png);
+  padding: 0;
+  margin: 4px;
+}
+
+.choose-map {
+  height: 80px;
+  width: 100%;
+  background: #ff26d6;
+  margin-top: 20px;
+  box-shadow: 1px 2px 3px #ccc;
+  box-sizing: border-box;
+  text-align: center;
+}
+
