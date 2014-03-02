@@ -6206,13 +6206,13 @@ th.hide-for-touch {
   top: 20px;
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
   height: 350px;
   z-index: 1;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
-  box-shadow: 1px 2px 3px #ccc; }
+  box-shadow: 2px 3px 3px #ccc; }
 
 .map-choice {
   position: absolute;
@@ -6220,8 +6220,7 @@ th.hide-for-touch {
   height: 100%;
   text-align: center;
   overflow: hidden;
-  background: #fff;
-  border: 1px #000000; }
+  background: #fff; }
 
 .content {
   position: relative;
@@ -6249,12 +6248,6 @@ th.hide-for-touch {
   overflow: hidden;
   max-width: 90%;
   margin-top: 20px; }
-
-.map-choice .button {
-  border-radius: 5%;
-  background-color: #4ef74e;
-  width: 80%;
-  margin: 20px; }
 
 .map-container {
   text-align: center;
@@ -6343,7 +6336,6 @@ th.hide-for-touch {
   z-index: 3;
   margin: 0px;
   float: left;
-  padding: 10px;
   left: 0px;
   top: 0px;
   border: solid 1px #000000;
@@ -6352,8 +6344,11 @@ th.hide-for-touch {
 .data-category:nth-child(2n+1) {
   background: #f2b701; }
 
+.data-category:hover {
+  background: #fff; }
+
 .data-icon {
-  margin-top: 20px; }
+  margin-top: 30px; }
 
 .data-name {
   padding: 0;

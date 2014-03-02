@@ -97,7 +97,6 @@
       z-index: 3;
       margin: 0px;
       float: left;
-      padding: 10px;
       left: 0px;
       top: 0px;
       border: solid 1px #000000;
@@ -107,8 +106,11 @@
     .data-category:nth-child(2n+1) {
       background: rgb(242, 183, 1);
     }
+    .data-category:hover{
+      background: #fff;
+    }
     .data-icon {
-      margin-top: 20px;
+      margin-top: 30px;
     }
     .data-name {
       padding: 0;
