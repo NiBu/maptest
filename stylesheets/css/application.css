@@ -6207,47 +6207,39 @@ th.hide-for-touch {
   position: relative;
   width: 100%;
   max-width: 420px;
-  height: 350px;
+  height: 300px;
   z-index: 1;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
-  box-shadow: 2px 3px 3px #ccc; }
+  box-shadow: 2px 3px 3px #ccc;
+  text-align: center; }
 
-.map-choice {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  overflow: hidden;
-  background: #fff; }
+.world {
+  background: #A2C64C; }
 
-.content {
-  position: relative;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  color: #fff; }
+.europe {
+  background: #72AFEE; }
+
+.usa {
+  background: #CA413D; }
 
 .map-choice-title {
-  top: 0px;
-  background: #3465aa;
-  height: 40px; }
+  height: 50px; }
 
 .map-choice-title h2 {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-size: 1.5em;
+  font-size: 2em;
   color: #fff9f7;
-  padding-top: 3px; }
+  padding-top: 3px;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
 
 .map-choice-img-holder {
   margin: 0 auto 0;
-  border-radius: 5px;
-  border: 3px solid #50597B;
   overflow: hidden;
   max-width: 90%;
-  margin-top: 20px; }
+  margin-top: 30px;
+  margin-bottom: 20px; }
 
 .map-container {
   text-align: center;
@@ -6321,8 +6313,6 @@ th.hide-for-touch {
 .data-overlay-container {
   height: 610px;
   width: 100%;
-  background-color: #000000;
-  opacity: 0.95;
   z-index: 2;
   position: relative;
   visibility: visible;
@@ -6339,16 +6329,19 @@ th.hide-for-touch {
   left: 0px;
   top: 0px;
   border: solid 1px #000000;
-  text-align: center; }
+  text-align: center;
+  opacity: 0.8; }
 
 .data-category:nth-child(2n+1) {
   background: #f2b701; }
 
 .data-category:hover {
-  background: #fff; }
+  background: #fff;
+  opacity: 0.5; }
 
 .data-icon {
-  margin-top: 30px; }
+  margin-top: 30px;
+  opacity: 1; }
 
 .data-name {
   padding: 0;
