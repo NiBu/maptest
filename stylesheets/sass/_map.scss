@@ -91,19 +91,17 @@
       position: relative;
       width: 33.3333333333%;
       height: 203.3333333px;
-      background: #ffe907;
+      background: #6BD412;
       z-index: 3;
       margin: 0px;
       float: left;
       left: 0px;
       top: 0px;
-      border: solid 1px #000000;
       text-align: center;
-      opacity: 0.8;
     }
 
     .data-category:nth-child(2n+1) {
-      background: rgb(242, 183, 1);
+      background: #72AFEE;
     }
     .data-category:hover{
       background: #fff;
